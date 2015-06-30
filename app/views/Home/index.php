@@ -29,31 +29,12 @@
               </div>
             </div>
             <h2 class="section-Title">Portal Electr&oacute;nico del IV Foro de Investigaci&oacute;n Educativa</h2>
-            <div class="login-Form">
-              <form class="form-horizontal">
-                <!-- <div class="row"> -->
-                  <div class="form-group">
-                    <div class="col-md-6 col-md-offset-3">
-                      <input type="text" class="form-control" placeholder="Usuario"value="">
-                    </div>
-                  </div> <!-- form group -->
-                <!-- </div> row -->
-                <!-- <div class="row"> -->
-                  <div class="form-group">
-                    <div class="col-md-6 col-md-offset-3">
-                      <input type="text" class="form-control" placeholder="Contrase&ntilde;a" value="">
-                    </div>
-                  </div> <!-- form group -->
-                <!-- </div> row -->
-                <!-- <div class="row"> -->
-                  <div class="form-group">
-                    <div class="col-md-6 col-md-offset-3">
-                      <button class="btn btn-default">Enviar</button>
-                    </div>
-                  </div> <!-- form group -->
-                <!-- </div> row -->
-              </form><!-- form -->
-            </div><!-- login-Form -->
+            <div class="row">
+              <div class="col-md-12">
+                <?php if(isset($_SESSION['facebook'])) ?>
+                <a href="<?php echo $data['helper']->getLoginUrl($data['scopes'])?>" class="btn btn-primary">Iniciar Session con facebook</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>    

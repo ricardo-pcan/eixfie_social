@@ -14,6 +14,8 @@
   //add dependencies
     define("FACEBOOK_SDK_V4_SRC_DIR", "./vendor/facebook-php-sdk-v4.4.0-dev/src/Facebook/");
     
+  //
+    session_start();
   //add autoload.php
     require global_path . "autoload.php";
 
@@ -21,17 +23,40 @@
   // router
     $uri = $_SERVER['REQUEST_URI'];
 
-    switch($uri)
+    if($uri == "/" || $uri == "/index.php"):
+      $data = array(
+        'helper' => $helper,
+        'scopes' => $application['general']['facebook']['scopes']
+        );
+      $HomeController->index($data);
+    elseif(ereg("/login", $uri)):
+      $HomeController->login();
+    endif;
+
+
+
+
+    /**switch($uri)
     {
       case "/":
-        $HomeController->index();
+        $data = array(
+          'helper' => $helper,
+          'scopes' => $application['general']['facebook']['scopes']
+          );
+        $HomeController->index($data);
         break;
       case "/index.php":
+        $data = array(
+          'helper' => $helper,
+          'scopes' => $application['general']['facebook']['scopes']
+          );
         $HomeController->index();
         break;
+      case "/login\*":
+        
       default:
         echo "no nada de que";
         break;
-    }
+    }*/
 
 ?>
