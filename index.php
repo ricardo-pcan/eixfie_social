@@ -31,6 +31,8 @@
       $HomeController->index($data);
     elseif(ereg("/login", $uri)):
       $HomeController->login();
+    elseif(ereg("/LineasTematicas/EducacionDesarrollo", $uri)):
+      $TematicLinesController->education();
     endif;
 
 

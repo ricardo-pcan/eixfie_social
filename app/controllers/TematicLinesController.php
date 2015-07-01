@@ -1,18 +1,17 @@
-<?php
-
+<?php 
   use Facebook\FacebookRequest;
   use Facebook\FacebookSession;
   use Facebook\GraphUser;
   use Facebook\GraphObject;
   use Facebook\GraphLocation;
 
-  class HomeController extends ApplicationController
+  class TematicLinesController extends ApplicationController
   {
 
-    public function index($data=null)
+    public function education($data=null)
     {
-      if ( isset($_SESSION['facebook']) ):
-        header('Location: /login');
+      if (isset($_SESSION['facebook']) ):
+        require render_template . "Tematic_Lines/educacion_desarrollo.php";
       else:
         require render_template . "Home/index.php";
       endif;
@@ -33,6 +32,6 @@
   }
 
   //init
-  $HomeController = new HomeController($application);
+  $TematicLinesController = new TematicLinesController($application);
 
 ?>

@@ -1,0 +1,63 @@
+.section-Contain
+{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  //background-attachment: fixed;
+}
+.section-Foro
+{
+  margin-bottom: 5%;
+}
+
+.section-Paragraph
+{
+  color: #fff;
+  font-size: 1.5em;
+  text-align: justify;
+  padding: 15px;
+  background-color: rgba(0,0,0,0.6);
+  margin-bottom: 30px;
+}
+
+#section-Resources
+{
+  min-height: 200px;
+  border-radius: 5px;
+  background: #86b4c1; /* Old browsers */
+  background: -moz-linear-gradient(top,  #86b4c1 0%, #87bcca 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#86b4c1), color-stop(100%,#87bcca)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #86b4c1 0%,#87bcca 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #86b4c1 0%,#87bcca 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #86b4c1 0%,#87bcca 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #86b4c1 0%,#87bcca 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#86b4c1', endColorstr='#87bcca',GradientType=0 ); /* IE6-9 */
+  margin: 3% auto;
+}
+
+.social-Element
+{
+  width: 100px;
+  height: 100px;
+  background-color: #A53E3E;
+  border-radius: 50%;
+  text-align: center;
+  margin: 2em auto;
+}
+.social-ElementIcon
+{
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-size: 4.3em;
+  line-height: 1.7em;
+}
+.section-ForoSocial
+{
+  background-color: rgba(191,191,191,0.1)
+}
+.Subtitle-section
+{
+  font-size: 2em;
+  font-family: 'Roboto Condensed', sans-serif;
+}

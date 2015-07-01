@@ -13,5 +13,6 @@
   //controllers
     require include_controller . "ApplicationController.php";
     require include_controller . "HomeController.php";
+    require include_controller . "TematicLinesController.php";
 
 ?>

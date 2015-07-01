@@ -1,0 +1,72 @@
+
+
+/**
+ * SPLASH
+ */
+section#splash
+{
+  background-image: url(../../../../assets/images/Jardin_CGFIE_humo_bi.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  opacity: .9;
+  //height: 100vh;
+}
+.splash-Presentation
+{
+  margin-top: 30px;
+}
+section#splash .splash-PresentationParagraphsContainer
+{
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.6);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+  color: #f5f5f5;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: justify;
+}
+
+section#splash .splash-PresentationParagraph
+{
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1.7em;
+  margin: 23px 0;
+}
+section#splash .splash-Container
+{
+  padding: 0 25px;
+}
+
+.profile-greet
+{
+  background-color: rgba(80, 118, 143, 0.9);
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+.profile-greet .profile-greet-img img
+{
+  border-radius: 50%;
+}
+
+.profile-greet .profile-greet-content
+{
+  color: #E8E8E8;
+  font-size: 1.5em;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+/**
+ * MEDIA QUERY
+ */
+@media(min-height: 767px)
+{
+  section#splash
+  {
+    height: 100vh;  
+  }
+  
+}
