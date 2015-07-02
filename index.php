@@ -21,7 +21,28 @@
 
 
   // router
-    $uri = $_SERVER['REQUEST_URI'];
+
+    $router = new AltoRouter();
+
+    $data = array(
+        'helper' => $helper,
+        'scopes' => $application['general']['facebook']['scopes']
+        );
+      ;
+    $router->map('GET', '/', $HomeController->index($data));
+
+    $match = $router->match();
+
+    if( $match && is_callable( $match['target'] ) ) {
+      call_user_func_array( $match['target'], $match['params'] ); 
+    } else {
+      // no route was matched
+      header( $_SERVER["SERVER_PROTOCOL"] . ' 404 Not Found');
+    }
+
+
+
+    /**$uri = $_SERVER['REQUEST_URI'];
 
     if($uri == "/" || $uri == "/index.php"):
       $data = array(
@@ -33,7 +54,7 @@
       $HomeController->login();
     elseif(ereg("/LineasTematicas/EducacionDesarrollo", $uri)):
       $TematicLinesController->education();
-    endif;
+    endif; */
 
 
 
